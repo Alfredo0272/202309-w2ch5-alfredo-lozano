@@ -12,7 +12,7 @@ function game() {
   const currentBoard = randomBoard();
   function calculateNexGenetation() {
     const nextBoard = nextRound(randomBoard);
-    currentBoard = nextBoard;
+    let currentBoard = nextBoard;
     console.clear();
     for (let row = 0; row < numRows; row++) {
       console.log(currentBoard.row[row].join(" "));
@@ -23,4 +23,4 @@ function game() {
     clearInterval(generateInterval);
   }, numGenerations * 500);
 }
-console.log(game());
+game();
