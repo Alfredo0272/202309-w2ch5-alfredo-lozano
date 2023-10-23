@@ -1,15 +1,11 @@
 import { randomBoard } from "./tools/create-board.js";
-import { celsConditions } from "./tools/cells-live.js";
-import { blanckBoard } from "./tools/blanck-board.js";
 import { nextRound } from "./tools/blanck-board.js";
-import { countAliveNeighbors } from "./tools/count-Neighbors.js";
 
 const numRows = 30;
-const numCols = 30;
 const numGenerations = 100;
 
 function game() {
-  const currentBoard = randomBoard();
+  randomBoard();
   function calculateNexGenetation() {
     const nextBoard = nextRound(randomBoard);
     const currentBoard = nextBoard;
